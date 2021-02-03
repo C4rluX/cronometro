@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Cronómetro Web por C4rluX2576</title>
+	<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+	<div id="fadeEffect" onclick="closeStartOnDlg()">
+
+	</div>
+	
+	<div id="stopWatchBox">
+		<div id="stopWatchNumbersBox">
+			<span id="hours">00</span>
+			<span>:</span>
+			<span id="minutes">00</span>
+			<span>:</span>
+			<span id="seconds">00</span>
+			<span>:</span>
+			<span id="miliseconds">00</span>
+		</div>
+		<div class="commonBtn" onclick="startStopWatch()">Iniciar/Reanudar Cronómetro</div>
+		<div class="commonBtn" onclick="pauseStopWatch()">Pausar Cronómetro</div>
+		<div class="commonBtn" onclick="resetStopWatch()">Reiniciar Cronómetro</div>
+		<div class="commonBtn" onclick="showStartInDlg()">Iniciar en...</div>
+	</div>
+
+	<div id="startFromBox">
+		<form id="startFromForm">
+			<h2>Empezar desde:</h2>
+			<div class="startFromSection"><span class="startFormLbl">Hora:</span><input type="number" name="hourInput" id="hourInputId" min="0"></div>
+			<div class="startFromSection"><span class="startFormLbl">Minuto:</span><input type="number" name="minuteInput" id="minuteInputId" min="0" max="59"></div>
+			<div class="startFromSection"><span class="startFormLbl">Segundo:</span><input type="number" name="secondInput" id="secondInputId" min="0" max="59"></div>
+			<div class="startFromSection"><span class="startFormLbl">Milisegundo:</span><input type="number" name="milisecondsInput" id="milisecondsInputId" min="0" max="9"></div>
+		</form>
+		<div class="commonBtn" style="margin-top: 15px; margin-bottom: 0px;" onclick="startOnStopWatch()">Iniciar</div>
+	</div>
+
+	<script src="./script.js"></script>
+
+</body>
+</html>
